@@ -1,0 +1,63 @@
+{
+  "format": 1,
+  "title": {
+    "en": "hgognav233-netizen plugins",
+    "zh": "hgognav233-netizen 的插件"
+  },
+  "description": {
+    "en": "DSH plugins.",
+    "zh": "DSH 插件。"
+  },
+  "metadata": {
+    "categories": {
+      "observability": {
+        "title": {
+          "en": "Observability",
+          "zh": "可观测性"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "puppy-workflow",
+      "title": {
+        "en": "Puppy workbench",
+        "zh": "小狗工作台"
+      },
+      "description": {
+        "en": "For beginners: a pixel-art 3D island where puppies act out every real step the AI takes on your computer, and a whale stands for the model.",
+        "zh": "给新手看的：一座像素画风格的三维小岛，小狗把 AI 在你电脑上的每一步真实操作演出来，海里的鲸鱼是大模型。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlB1cHB5IHdvcmtiZW5jaCI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNyIgZmlsbD0iI2ZmZjNkOSIvPgogIDxyZWN0IHg9IjUiIHk9IjYiIHdpZHRoPSI1IiBoZWlnaHQ9IjEwIiBmaWxsPSIjYjU1ZTMxIi8+CiAgPHJlY3QgeD0iMjIiIHk9IjYiIHdpZHRoPSI1IiBoZWlnaHQ9IjEwIiBmaWxsPSIjYjU1ZTMxIi8+CiAgPHJlY3QgeD0iNiIgeT0iNCIgd2lkdGg9IjMiIGhlaWdodD0iNCIgZmlsbD0iI2I1NWUzMSIvPgogIDxyZWN0IHg9IjIzIiB5PSI0IiB3aWR0aD0iMyIgaGVpZ2h0PSI0IiBmaWxsPSIjYjU1ZTMxIi8+CiAgPHJlY3QgeD0iOCIgeT0iNyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSIjZGU4NzJmIi8+CiAgPHJlY3QgeD0iOCIgeT0iMjAiIHdpZHRoPSIxNiIgaGVpZ2h0PSIzIiBmaWxsPSIjYWI1OTI4Ii8+CiAgPHJlY3QgeD0iMTEiIHk9IjE3IiB3aWR0aD0iMTAiIGhlaWdodD0iNiIgZmlsbD0iI2ZmZjBjOCIvPgogIDxyZWN0IHg9IjEyIiB5PSIxMSIgd2lkdGg9IjIiIGhlaWdodD0iMyIgZmlsbD0iIzMwMmUzMiIvPgogIDxyZWN0IHg9IjE5IiB5PSIxMSIgd2lkdGg9IjIiIGhlaWdodD0iMyIgZmlsbD0iIzMwMmUzMiIvPgogIDxyZWN0IHg9IjE1IiB5PSIxOCIgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iIzMwMmUzMiIvPgogIDxyZWN0IHg9IjE2IiB5PSIyMCIgd2lkdGg9IjEiIGhlaWdodD0iMiIgZmlsbD0iIzMwMmUzMiIvPgogIDxyZWN0IHg9IjEwIiB5PSIyMyIgd2lkdGg9IjEyIiBoZWlnaHQ9IjMiIGZpbGw9IiNlODVmNjUiLz4KICA8cmVjdCB4PSIxNCIgeT0iMjYiIHdpZHRoPSI0IiBoZWlnaHQ9IjIiIGZpbGw9IiNjOGU4YmIiLz4KPC9zdmc+Cg==",
+      "author": "hgognav233-netizen",
+      "homepage": "https://github.com/hgognav233-netizen/dsh-puppy-workflow",
+      "repository": {
+        "url": "https://github.com/hgognav233-netizen/dsh-puppy-workflow"
+      },
+      "metadata": {
+        "category": "observability",
+        "keywords": [
+          "beginner",
+          "visualization",
+          "workflow",
+          "subagent",
+          "island",
+          "3d",
+          "pixel-art"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.6.0",
+          "publishTimestamp": 1795730216,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/hgognav233-netizen/dsh-puppy-workflow",
+            "commit": "4c80eb7ba2e95214110ffd3ab17eded4a19d7760"
+          }
+        }
+      ]
+    }
+  ]
+}
