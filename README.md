@@ -65,6 +65,7 @@ https://raw.githubusercontent.com/hgognav233-netizen/dsh-puppy-workflow/main/ind
 ### 隐私
 
 - 只**读**本机的会话日志：不写会话、不上传、不访问外网。
+- 会话列表和回放接口只回应已登录 DSH 的页面（DSH 自己的登录 cookie）；本机其他程序直接访问会被拒绝（401）。
 - three.js 和小岛模型都从插件自己的本地地址加载。
 - 面板里会显示文件夹名、命令摘要、消息片段——截图分享前留意。
 
@@ -131,6 +132,7 @@ Once installed: a "Puppy" button sits next to the chat input (current session), 
 ### Privacy
 
 - It only **reads** the local session logs: it writes nothing, uploads nothing, and makes no network requests.
+- The session list and replay endpoints answer only pages signed in to DSH (its own browser-session cookie); other local programs get 401.
 - three.js and the island model load from the plugin's own local route.
 - The panel shows folder names, command summaries and message snippets — mind that before sharing screenshots.
 

@@ -1,6 +1,6 @@
 {
   "name": "puppy-workflow",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "private": true,
   "type": "module",
   "description": "A beginner view of the running Harness session: a real-time 3D island garden drawn as pixel art (three.js, Blender model) where dogs act out every real tool call and a whale stands for the model.",

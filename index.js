@@ -10,7 +10,7 @@
  */
 import { readFile, stat } from 'node:fs/promises'
 
-export const inject = ['webServer', 'sessionQuery']
+export const inject = ['webServer', 'sessionQuery', 'connection']
 
 // Static files the 3D stage loads in the browser: the vendored three.js build
 // (unchanged files from three@0.184.0, see vendor/README.md) and the island
@@ -754,8 +754,21 @@ export function apply(ctx) {
     }
   }
 
-  // Match Workflow Viewer: require admission, and constrain legacy peerless reads
-  // to a loopback listener with a local authority and no cross-site browser context.
+  // Session data (list, replay, ping): only a reader the host admitted. Over HTTP
+  // the webserver passes no Peer, so ask Connection — the same Host/Origin fence
+  // and signed browser-session cookie that guard the Harness page itself.
+  // No loopback fallback: any local process can reach 127.0.0.1.
+  function dataRejection(request, peer) {
+    if (peer) return undefined
+    try {
+      return ctx.connection.requestRejection(request)
+    } catch {
+      return 401
+    }
+  }
+
+  // Static modules and the island model hold no session data; like the Harness's
+  // own non-index assets they stay readable from a loopback listener.
   function canRead(request, peer) {
     if (peer) return true
     const authority = request.headers.get('host')
@@ -812,7 +825,10 @@ export function apply(ctx) {
       kind: 'exact',
       path: '/puppy-workflow/' + name,
       auth: 'required',
-      resource: (request, peer) => canRead(request, peer) ? resource(request) : json({ error: 'access_denied' }, 403),
+      resource: (request, peer) => {
+        const rejection = dataRejection(request, peer)
+        return rejection === undefined ? resource(request) : json({ error: rejection === 401 ? 'unauthorized' : 'access_denied' }, rejection)
+      },
     }))
   }
 }
