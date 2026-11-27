@@ -49,12 +49,12 @@
       },
       "versions": [
         {
-          "version": "0.6.0",
-          "publishTimestamp": 1795730216,
+          "version": "0.6.1",
+          "publishTimestamp": 1795788927,
           "source": {
             "type": "git",
             "url": "https://github.com/hgognav233-netizen/dsh-puppy-workflow",
-            "commit": "4c80eb7ba2e95214110ffd3ab17eded4a19d7760"
+            "commit": "2f790359b4357de60c8942cf5b9e0785a36144cd"
           }
         }
       ]
